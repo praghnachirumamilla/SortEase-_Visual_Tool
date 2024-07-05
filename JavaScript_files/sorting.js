@@ -97,11 +97,16 @@ function createNewArray(noOfBars = 60) {
 
     // create multiple element div using loop and adding class 'bar col'
     for (let i = 0; i < noOfBars; i++) {
+        //create a new div element
         const bar = document.createElement("div");
+        // give the created div element a value of height
         bar.style.height = `${array[i]*2}px`;
+        // add the css 'bar' to the created bar
         bar.classList.add('bar');
-        bar.classList.add('flex-item');
+        //// add the css 'flex-item' to the created bar
+        bar.classList.add('flex-item');       
         bar.classList.add(`barNo${i}`);
+        //now add the newly created bar to #bars div 
         bars.appendChild(bar);
     }
 }
